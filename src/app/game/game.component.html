@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container" style="height: 64px;color: gray"></div>
+
+<!--Main Layout-->
+<main class="py-5">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <br>
+                <p align="justify" class="font-weight-bold text-lg-left">FreeChat</p>
+                <br>
+                <p align="justify" class="text-sm-left">这是一个锻炼表演和演讲的舞台
+                </p>
+                <p align="justify" class="text-sm-left">请通过房间号来加入聊天小组
+                    <mdb-icon icon="smile-o"></mdb-icon>
+                </p>
+                <br>
+                <form>
+                    <div class="md-form">
+                        <i class="fa fa-user prefix"></i>
+                        <input mdbInputDirective data-error="名字不能为空" [formControl]="nameFormEx" minLength="3" type="text" class="form-control" id="name"
+                            name="name" #playername>
+                        <label for="name">请输入你的名字</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-home prefix"></i>
+                        <input mdbInputDirective data-error="房号不能为空" [formControl]="roomFormEx" minLength="3" type="text" class="form-control" id="room"
+                            name="room" #roomnumber>
+                        <label for="room">请输入房间号码</label>
+                    </div>
+                    <br>
+                    <button mdbBtn type="button" (click)="joinRoom(playername.value, roomnumber.value)" color="success" class="waves-light font-weight-bold w-100" mdbWavesEffect>Enjoy!</button>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <img src="/src/static/img/werelogo.png" class="float-none">
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main Layout-->

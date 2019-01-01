@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node socketserver.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "siver": "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +21,18 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@types/chart.js": "^2.7.31",
+    "angular-bootstrap-md": "^6.2.2",
+    "angular5-csv": "^0.2.10",
+    "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
+    "hammerjs": "^2.0.8",
+    "ngx-cookie-service": "^1.0.10",
     "rxjs": "^6.0.0",
+    "rxjs-compat": "^6.3.2",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
